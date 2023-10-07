@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action
         env:
-          KEY: ${{ secret.SuperSecret }}
+          KEY: ${{ secrets.SuperSecret }}
         run: echo $KEY
       - name: Dump GitHub context
         env:
