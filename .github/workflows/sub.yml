@@ -5,6 +5,11 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
+      - name: Hello world action
+        with: # Set the secret as an input
+          super_secret: ${{ secrets.SuperSecret }}
+        env: # Or as an environment variable
+          super_secret: ${{ secrets.SuperSecret }}
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
