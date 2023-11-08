@@ -15,4 +15,6 @@ jobs:
       run: python -v
     - uses: actions/checkout@v2
     - name: 파이썬 파일 실행
-      run: python test.py
+      run: |
+       pip install -r requirements.txt
+       python test.py
