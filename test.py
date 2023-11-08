@@ -28,8 +28,9 @@ with open('data.js', "r", encoding="UTF-8-sig") as f:
         data += line
         line = f.readline()
 print(data)
+x = dt.datetime.now()
 
 #파일에 변수명을 추가하여 다시 쓴다.
 final_data = f"var data = {data};"
-with open('data.js', "w", encoding="UTF-8-sig") as f_write:
+with open(f'data_{x.strftime("%m%d_%H%M%S")}.js', "w", encoding="UTF-8-sig") as f_write:
     f_write.write(final_data)
