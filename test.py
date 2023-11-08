@@ -27,6 +27,7 @@ with open('data.js', "r", encoding="UTF-8-sig") as f:
     while line:
         data += line
         line = f.readline()
+print(data)
 
 #파일에 변수명을 추가하여 다시 쓴다.
 final_data = f"var data = {data};"
