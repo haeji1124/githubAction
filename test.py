@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import json
+import datetime as dt
 
 response = requests.get("https://ridibooks.com/category/new-releases/2200")
 
