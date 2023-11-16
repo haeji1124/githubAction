@@ -14,5 +14,7 @@ jobs:
     - name: 파이썬 버전 출력
       run: python -v
     - uses: actions/checkout@v2
+    - name: 파이썬 모듈 설치
+      run: pip install -r requirements.txt
     - name: 파이썬 파일 실행
       run: python test.py
